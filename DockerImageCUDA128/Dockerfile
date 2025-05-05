@@ -37,6 +37,7 @@ COPY --chmod=755 start-original.sh /start-original.sh
 COPY --chmod=755 comfyui-on-workspace.sh /comfyui-on-workspace.sh
 COPY --chmod=755 check_files.sh /check_files.sh
 
+RUN pip3 install ninja
 RUN pip3 install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
 # Clone the git repo and install requirements in the same RUN command to ensure they are in the same layer
 RUN git clone https://github.com/comfyanonymous/ComfyUI.git && \
