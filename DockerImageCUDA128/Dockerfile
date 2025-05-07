@@ -255,9 +255,7 @@ RUN huggingface-cli download h94/IP-Adapter-FaceID --local-dir ./ComfyUI/models/
 
 
 RUN huggingface-cli download laion/CLIP-ViT-H-14-laion2B-s32B-b79K model.safetensors --local-dir ./ComfyUI/models/clip_vision/
-RUN mv ./ComfyUI/models/clip_vision/model.safetensors ./ComfyUI/models/clip_vision/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
 
-RUN mv ./ComfyUI/models/clip_vision/model.safetensors ./ComfyUI/models/clip_vision/CLIP-ViT-bigG-14-laion2B-39B-b160k.safetensors
 
 RUN huggingface-cli download HCMUE-Research/SAM-vit-h sam_vit_h_4b8939.pth --local-dir ./ComfyUI/models/sams/
 
