@@ -252,16 +252,16 @@ RUN huggingface-cli download Kijai/DepthAnythingV2-safetensors --local-dir ./Com
 RUN huggingface-cli download h94/IP-Adapter --local-dir ./ComfyUI/models/ipadapter/
 RUN huggingface-cli download h94/IP-Adapter-FaceID --local-dir ./ComfyUI/models/ipadapter/
 
-RUN cp ComfyUI/models/ipadapter/ip-adapter-faceid_sd15_lora.safetensors ComfyUI/models/loras/
-RUN cp ComfyUI/models/ipadapter/ip-adapter-faceid-plusv2_sd15_lora.safetensors ComfyUI/models/loras/
-RUN cp ComfyUI/models/ipadapter/ip-adapter-faceid_sdxl_lora.safetensors ComfyUI/models/loras/
-RUN cp ComfyUI/models/ipadapter/ip-adapter-faceid-plusv2_sdxl_lora.safetensors ComfyUI/models/loras/
-RUN cp ComfyUI/models/ipadapter/ip-adapter-faceid-plus_sd15_lora.safetensors ComfyUI/models/loras/
+RUN cp ./ComfyUI/models/ipadapter/ip-adapter-faceid_sd15_lora.safetensors ./ComfyUI/models/loras/
+RUN cp ./ComfyUI/models/ipadapter/ip-adapter-faceid-plusv2_sd15_lora.safetensors ./ComfyUI/models/loras/
+RUN cp ./ComfyUI/models/ipadapter/ip-adapter-faceid_sdxl_lora.safetensors ./ComfyUI/models/loras/
+RUN cp ./ComfyUI/models/ipadapter/ip-adapter-faceid-plusv2_sdxl_lora.safetensors ./ComfyUI/models/loras/
+RUN cp ./ComfyUI/models/ipadapter/ip-adapter-faceid-plus_sd15_lora.safetensors ./ComfyUI/models/loras/
 
 RUN huggingface-cli download laion/CLIP-ViT-H-14-laion2B-s32B-b79K model.safetensors --local-dir ./ComfyUI/models/clip_vision/
 RUN mv ./ComfyUI/models/clip_vision/model.safetensors ./ComfyUI/models/clip_vision/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
 
-RUN cp ComfyUI/models/ipadapter/sdxl_models/image_encoder/model.safetensors ComfyUI/models/clip_vision/
+RUN cp ./ComfyUI/models/ipadapter/sdxl_models/image_encoder/model.safetensors ./ComfyUI/models/clip_vision/
 RUN mv ./ComfyUI/models/clip_vision/model.safetensors ./ComfyUI/models/clip_vision/CLIP-ViT-bigG-14-laion2B-39B-b160k.safetensors
 
 RUN huggingface-cli download HCMUE-Research/SAM-vit-h sam_vit_h_4b8939.pth --local-dir ./ComfyUI/models/sams/
