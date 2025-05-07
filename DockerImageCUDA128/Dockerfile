@@ -248,9 +248,6 @@ RUN huggingface-cli download comfyanonymous/flux_text_encoders --local-dir ./Com
 
 RUN huggingface-cli download Kijai/DepthAnythingV2-safetensors --local-dir ./ComfyUI/models/depthanything
 
-RUN huggingface-cli download black-forest-labs/FLUX.1-Redux-dev flux1-redux-dev.safetensors --local-dir ./ComfyUI/models/style_models/
-
-RUN huggingface-cli download black-forest-labs/FLUX.1-schnell ae.safetensors --local-dir ./ComfyUI/models/vae/
 
 RUN huggingface-cli download h94/IP-Adapter --local-dir ./ComfyUI/models/ipadapter/
 RUN huggingface-cli download h94/IP-Adapter-FaceID --local-dir ./ComfyUI/models/ipadapter/
